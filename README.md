@@ -24,13 +24,11 @@ When creating PRs, Bitbucket doesn't allow the PR author to be listed as a revie
 This prevents the common error:
 > "reviewers: [Author Name] is the author and cannot be included as a reviewer."
 
-### 2. Known Team Members Reference
+### 2. Dynamic Author Detection
 
-Includes a template table for team members with their UUIDs. Add your own team members for quick reference when filtering:
+Identifies the PR author by checking `git config user.email` and matching against the default reviewers response. No hardcoded team member lists required.
 
-| Name | Nickname | UUID |
-|------|----------|------|
-| (Add your team members) | | |
+**Optional**: For performance, you can cache team member UUIDs in your project's CLAUDE.md under a "Bitbucket Team Members" section.
 
 ### 3. Branch Cleanup on Merge
 

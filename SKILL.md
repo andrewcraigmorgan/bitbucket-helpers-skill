@@ -85,15 +85,15 @@ mcp__bitbucket__bb_post(
 | Peachy Nursery | mtcmedia | tudu-laravel-api-and-inertia-app |
 | CAHER | mtcmedia | caher-staff-dashboard |
 
-### Known Team Members (for author filtering)
+### Identifying the Author
 
-Maintain a table of team members in your project's CLAUDE.md or here for quick reference:
+To filter out the author from reviewers:
 
-| Name | Nickname | UUID |
-|------|----------|------|
-| (Add your team members here) | | |
+1. **Get author identity**: Run `git config user.email` to get the current user's email
+2. **Match against reviewers**: Compare with the `nickname` or `display_name` from the default reviewers response
+3. **Exclude matching UUID**: Remove the author's UUID from the reviewers list
 
-When creating a PR, check `git config user.email` or the MCP configured user to identify the author, then exclude their UUID from reviewers.
+**Optional caching**: If you frequently create PRs and want to avoid repeated API calls, add a "Bitbucket Team Members" section to your project's CLAUDE.md with the UUIDs. The skill will use cached values when available.
 
 ## Quick Reference
 
