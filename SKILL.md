@@ -51,14 +51,14 @@ mcp__bitbucket__bb_post(
 )
 ```
 
-**Example: If Andrew Morgan is the author:**
+**Example: If User A is the author:**
 ```
 # Default reviewers returned:
-#   - Andrejs Bucnevs: {9584d0d8-29e2-423a-86c7-6288b7b9b443}
-#   - Andrew Morgan: {e8731f55-e830-4ff2-891a-ee2b05f3eefa}  <- AUTHOR, exclude this
+#   - User B: {uuid-user-b}
+#   - User A: {uuid-user-a}  <- AUTHOR, exclude this
 #
 # PR should only include:
-"reviewers": [{"uuid": "{9584d0d8-29e2-423a-86c7-6288b7b9b443}"}]
+"reviewers": [{"uuid": "{uuid-user-b}"}]
 ```
 
 **IMPORTANT:** If you try to add the author as a reviewer, Bitbucket will return a 400 error:
@@ -87,12 +87,13 @@ mcp__bitbucket__bb_post(
 
 ### Known Team Members (for author filtering)
 
+Maintain a table of team members in your project's CLAUDE.md or here for quick reference:
+
 | Name | Nickname | UUID |
 |------|----------|------|
-| Andrew Morgan | andrewmorganmtc | {e8731f55-e830-4ff2-891a-ee2b05f3eefa} |
-| Andrejs Bucnevs | Andrejs Bucnevs | {9584d0d8-29e2-423a-86c7-6288b7b9b443} |
+| (Add your team members here) | | |
 
-When creating a PR, check the git config or assume the MCP user is the author, then exclude their UUID from reviewers.
+When creating a PR, check `git config user.email` or the MCP configured user to identify the author, then exclude their UUID from reviewers.
 
 ## Quick Reference
 

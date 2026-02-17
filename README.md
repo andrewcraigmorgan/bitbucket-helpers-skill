@@ -26,12 +26,11 @@ This prevents the common error:
 
 ### 2. Known Team Members Reference
 
-Includes a table of team members with their UUIDs for quick reference when filtering:
+Includes a template table for team members with their UUIDs. Add your own team members for quick reference when filtering:
 
 | Name | Nickname | UUID |
 |------|----------|------|
-| Andrew Morgan | andrewmorganmtc | {e8731f55-e830-4ff2-891a-ee2b05f3eefa} |
-| Andrejs Bucnevs | Andrejs Bucnevs | {9584d0d8-29e2-423a-86c7-6288b7b9b443} |
+| (Add your team members) | | |
 
 ### 3. Branch Cleanup on Merge
 
