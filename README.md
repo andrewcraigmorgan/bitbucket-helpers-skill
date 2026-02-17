@@ -34,9 +34,9 @@ Identifies the PR author by checking `git config user.email` and matching agains
 
 Ensures `close_source_branch: true` is always set when merging PRs to keep the repository clean.
 
-### 4. Common Workspace/Repo Slugs
+### 4. Workspace/Repo Detection
 
-Quick reference for frequently used repositories.
+Extracts workspace and repo slug from git remote URL or project's CLAUDE.md.
 
 ## Usage
 

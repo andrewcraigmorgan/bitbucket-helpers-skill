@@ -78,12 +78,11 @@ mcp__bitbucket__bb_post(
 )
 ```
 
-### Common Workspace/Repo Slugs
+### Workspace/Repo Slugs
 
-| Project | Workspace | Repo Slug |
-|---------|-----------|-----------|
-| Peachy Nursery | mtcmedia | tudu-laravel-api-and-inertia-app |
-| CAHER | mtcmedia | caher-staff-dashboard |
+Get the workspace and repo slug from:
+- The git remote URL: `git remote get-url origin`
+- Or the project's CLAUDE.md configuration
 
 ### Identifying the Author
 
